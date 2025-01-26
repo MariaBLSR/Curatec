@@ -1,0 +1,35 @@
+GitHub commands Curatec:
+
+Nota: Quizá sea necesario mover el .git en tu local (se borraran las branches en local)
+
+- Ejecutar git init en la carpeta del proyecto
+- git checkout -b main (crear bran main)
+- git remote add origin "enlace" (Vinculaar local con GitHub)
+- git status (rojo?)
+	- git add .  (registra cambios en el área de preparación en local)
+	- git commit -m "mensaje" (Añade un comentario a lo que está en tu área de preparación en local)
+- git fetch origin (para descargar la inf. sobre las Branch en GitHub)
+	- git branch (comprobación de no ramas en local)
+	- git Branch -r (inf. de ramas remotas)
+- git checkout -b feature/Branch origin/Branch (crear rama local que siga a la remota, mejor todas de main)
+
+************* IMPORTANTE *******************
+Antes de empezar a trabajar en tu branch revisa si hay cambios en la main, en caso de haberlos actualiza tu main local
+
+- git pull origin main (necesario actualizar en local para subir en remoto)
+	- git pull origin main --allow-unrelated-histories (si haz hecho un .git init previo)
+
+********************************************
+- git checkout featured/Branch
+- git add . (mandar a zona de preparacion)
+- git commit -m "comentario" (añade un commit resumido del cambio, "Test V2, cambio de color" por ejemplo)
+- git push origin main (actualiza el contenido del GitHub)
+
+*Nota: Si la main ha sido actualizada necesitas actualizar tu branch*
+- muevete a tu branch
+- git merge main 
+- git push origin feature/branch (Se crea la rama remota feature/Omar, por ejemplo)
+- git push --delete Branch (Elimina la rama remota Omar, por ejemplo)
+
+(Todas las ramas remotas empiezan por feature/ esto para que haga más fácil saber que son remotas desde la ventana de comandos)
+
